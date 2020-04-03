@@ -1,0 +1,25 @@
+{
+  "name": "js-query-builder",
+  "version": "1.0.0",
+  "description": "Port of PHP's Http Query Builder into browser",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http",
+    "query-builder",
+    "js",
+    "ts",
+    "browser",
+    "nodejs",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Dusan Malusev",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
