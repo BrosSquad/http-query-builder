@@ -2,11 +2,17 @@
 
 > Port of PHP's Http Query Builder into JavaScript
 
-## Usage
+### Instalation
 
+```sh
+  $ npm install http-query-builder
+```
+
+
+### Usage
 ```ts
 
-import httpBuildQuery from 'js-query-builder';
+import httpBuildQuery from 'http-query-builder';
 
 // 1. parameter - any array, object, null or undefined
 // 2. parameter - argument separator - defaults to '&'
