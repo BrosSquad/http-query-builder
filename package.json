@@ -1,10 +1,10 @@
 {
   "name": "js-query-builder",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Port of PHP's Http Query Builder into browser",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.module.json",
     "test": "mocha  -r ts-node/register test/**/*.test.ts",
     "prepublish": "npm run build"
   },

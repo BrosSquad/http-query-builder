@@ -6,9 +6,9 @@
 
 ```ts
 
-import httpBuildQuery from 'http-build-query';
+import httpBuildQuery from 'js-query-builder';
 
-// 1. parameter - any array, object, string, null or undefined
+// 1. parameter - any array, object, null or undefined
 // 2. parameter - argument separator - defaults to '&'
 const query: string = httpBuildQuery({ 
    orderBy: [

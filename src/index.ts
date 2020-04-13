@@ -1,4 +1,4 @@
-function formatValue(value: boolean | string | number | null | undefined): string {
+function formatValue(value: boolean | string | number): string {
   if (value === null || value === undefined) return '';
   if (value === true) return '1';
   if (value === false) return '0';
@@ -6,10 +6,7 @@ function formatValue(value: boolean | string | number | null | undefined): strin
   return value;
 }
 
-function buildQuery(
-  query: object | Array<any> | null | undefined,
-  tempKey: string | null,
-): Array<string> {
+function buildQuery(query: object | Array<any>, tempKey: string | null): Array<string> {
   return Object.keys(query).reduce((acc, key) => {
     if (query[key] === null || query[key] === undefined) {
       return acc;
