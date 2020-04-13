@@ -1,4 +1,4 @@
-function formatValue(value: boolean | string | number | null | undefined) {
+function formatValue(value: boolean | string | number | null | undefined): string {
   if (value === null || value === undefined) return '';
   if (value === true) return '1';
   if (value === false) return '0';
@@ -7,11 +7,11 @@ function formatValue(value: boolean | string | number | null | undefined) {
 }
 
 function buildQuery(
-  query: object | Array<any> | string | null | undefined,
+  query: object | Array<any> | null | undefined,
   tempKey: string | null,
-) {
+): Array<string> {
   return Object.keys(query).reduce((acc, key) => {
-    if (!query[key]) {
+    if (query[key] === null || query[key] === undefined) {
       return acc;
     }
 
@@ -28,9 +28,14 @@ function buildQuery(
 }
 
 function httpBuildQuery(
-  query: object | Array<any> | string | null | undefined,
+  query: object | Array<any> | null | undefined,
   separator: string = '&',
-) {
+): string {
+
+  if (typeof query !== 'object' && query !== undefined && Array.isArray(query) === false) {
+    throw new Error('Query type can only by array or object');
+  }
+
   if (!query) {
     return '';
   }
